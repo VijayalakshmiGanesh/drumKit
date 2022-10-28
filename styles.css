@@ -1,0 +1,58 @@
+html,
+body {
+    height: 100%;
+    background-image: url("assests/background.jpg");
+    background-size: cover;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    outline: solid 1px black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.keys {
+    padding: 2rem;
+    margin: 0.5rem;
+    color: white;
+    min-width: fit-content;
+    height: 125px;
+    text-align: center;
+    font-size: 3rem;
+    border: 5px solid black;
+}
+
+div>p {
+    font-size: 1.5rem;
+    color: goldenrod;
+    font-weight: 700;
+}
+
+/* 
+ main {
+     height: 200px;
+     background: #CCCCCC;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding-top: 40%;
+ }
+
+ main>div {
+     text-align: center;
+     font-size: 3rem;
+     border: 5px solid black;
+     padding: 2rem;
+     margin: 0.5rem;
+     color: white;
+     width: 100px;
+     height: 100px;
+ }
+
+ div>p {
+     font-size: 1.5rem;
+     color: goldenrod;
+ } */
