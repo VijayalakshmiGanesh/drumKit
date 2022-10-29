@@ -1,4 +1,5 @@
-
+var inputField = document.querySelector("input")
+button = document.querySelector("button")
 
 function getCharCode(keyPressed) {
     var audioElement = document.querySelector(`audio[data-keyvalue="${keyPressed.keyCode}"]`)
@@ -17,6 +18,10 @@ function removeTransition(event) {
     else this.classList.remove("keys-press")
 }
 
+function showKeypad() {
+    inputField.focus();
+}
+
 window.addEventListener("keydown", getCharCode);
 var keys = document.querySelectorAll(".keys")
 
@@ -24,3 +29,5 @@ keys.forEach(element => {
     // console.log(element)
     element.addEventListener("transitionend", removeTransition)
 });
+
+button.addEventListener("click", showKeypad)

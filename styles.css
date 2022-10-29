@@ -49,7 +49,8 @@ footer {
     color: white;
 }
 
-.mobile-button {
+input,
+button {
     display: none;
 }
 
@@ -72,5 +73,31 @@ footer {
         display: inline;
     }
 
+    input,
+    button {
+        display: flex;
+
+    }
+
+    input {
+        background-color: transparent;
+        color: transparent;
+        border: none;
+    }
+
+    input:focus,
+    input:focus-visible,
+    input:focus-within,
+    input:active {
+        background-color: transparent;
+        color: transparent;
+        border: none;
+    }
+
+    button {
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+    }
 
 }
