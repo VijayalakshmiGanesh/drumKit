@@ -92,6 +92,7 @@ button {
         background-color: transparent;
         color: transparent;
         border: none;
+        caret-color: transparent;
     }
 
     input:focus,
