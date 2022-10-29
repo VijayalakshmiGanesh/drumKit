@@ -49,17 +49,28 @@ footer {
     color: white;
 }
 
+.mobile-button {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     main {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 10px;
+        height: fit-content;
     }
 
     .keys {
         height: 6rem;
-        min-width: 8rem;
+        min-width: 5rem;
+
     }
 
-    footer {
-        position: relative;
+    .mobile-button {
+        display: inline;
     }
+
+
 }
