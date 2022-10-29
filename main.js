@@ -1,11 +1,12 @@
 var inputField = document.querySelector("input")
 button = document.querySelector("button")
 
-function getCharCode(keyPressed) {
+
+function playAudio(keyPressed) {
     var audioElement = document.querySelector(`audio[data-keyvalue="${keyPressed.keyCode}"]`)
     var divElement = document.querySelector(`.keys[data-keyvalue="${keyPressed.keyCode}"]`)
 
-    if (!audioElement) console.log("Press valid key")
+    if (!audioElement) return; //exit when key code is not present
     else {
         divElement.classList.add("keys-press")
         audioElement.currentTime = 0;
@@ -20,12 +21,12 @@ function removeTransition(event) {
 
 function showKeypad() {
     inputField.focus();
-    document.body.style.zoom = "90%";
+    document.body.style.zoom = "80%";
 }
 
-window.addEventListener("keydown", getCharCode);
-var keys = document.querySelectorAll(".keys")
+window.addEventListener("keydown", playAudio);
 
+var keys = document.querySelectorAll(".keys")
 keys.forEach(element => {
     // console.log(element)
     element.addEventListener("transitionend", removeTransition)
