@@ -55,19 +55,28 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
+
     main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 0;
         grid-row-gap: 10px;
-        height: fit-content;
+        height: fit-content; */
     }
 
     .keys {
-        height: 6rem;
+        flex: 0 0 calc(50% - 20px);
+        height: 8rem;
         min-width: 5rem;
 
     }
+
 
     .mobile-button {
         display: inline;
@@ -75,7 +84,7 @@ button {
 
     input,
     button {
-        display: flex;
+        display: block;
 
     }
 
@@ -92,12 +101,18 @@ button {
         background-color: transparent;
         color: transparent;
         border: none;
+        cursor: none;
+        outline-color: transparent;
+        outline-style: none;
+        outline: none;
+        text-decoration: none;
     }
 
     button {
-        text-align: center;
-        align-self: center;
-        justify-content: center;
+        margin: auto;
     }
 
+    footer {
+        display: relative;
+    }
 }

@@ -20,6 +20,7 @@ function removeTransition(event) {
 
 function showKeypad() {
     inputField.focus();
+    document.body.style.zoom = "100%";
 }
 
 window.addEventListener("keydown", getCharCode);
